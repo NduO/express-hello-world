@@ -8,7 +8,7 @@ app.get("/", (req, res) => {
 
 app.get("/accounts", (req, res) => {
   const urlParams = req.originalUrl;
-  res.send("url: - " + urlParams);
+  res.json({mode:json,amount:2500});
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
