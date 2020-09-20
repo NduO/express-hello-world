@@ -8,7 +8,13 @@ app.get("/", (req, res) => {
 
 app.get("/accounts", (req, res) => {
   const urlParams = req.originalUrl;
-  res.send(JSON.stringify({mode:json,amount:2500}));
+  const myObj = {
+    name: 'Skip',
+    age: 2,
+    favoriteFood: 'Steak'
+  };
+  const myObjStr = JSON.stringify(myObj);
+  res.send(myObjStr);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
