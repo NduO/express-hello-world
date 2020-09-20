@@ -7,7 +7,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/accounts", (req, res) => {
-  res.send("req.body");
+  const urlParams = req.originalUrl;
+  res.send("url: - " + urlParams);
 });
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
